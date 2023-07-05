@@ -1,0 +1,207 @@
+html
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+section {
+  transition: transform 1s;
+  scroll-margin-top: 60px;
+}
+
+section.active {
+  transform: translate3d(0, -60px, 0);
+}
+
+.span1 {
+    background: -webkit-linear-gradient(white, #5898d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1em;
+  }
+  
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3vh 10vh;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .5s;
+}
+
+.sticky{
+  background: #fff;
+  transition: 0.5s;
+  padding-top: 0.5%;
+  width: 100%;
+  padding-bottom: 0.5%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.sticky .logo{
+  color: #111;
+}
+
+.sticky .logo .span1 {
+  background: -webkit-linear-gradient(rgb(0, 0, 0), #5898d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sticky .navigation li a{
+  background: -webkit-linear-gradient(rgb(0, 0, 0), #5898d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sticky .navigation li a:hover
+{
+  background: -webkit-linear-gradient(rgb(79, 81, 90), #5898d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .logo
+{
+  color: #dfe3ec;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li
+{
+  list-style: none;
+  margin-left: 5vh;
+}
+
+header .navigation li a
+{
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  font-weight: 550;
+  font-size: 1.2em;
+  transition: .5s;
+}
+
+header .navigation li a:hover
+{
+  color: #5898d8;
+  transition: .5s;
+  font-size: 1.5em;
+
+}
+
+@media (max-width: 1180px)
+{
+    header{
+      width: 100%;
+      padding-left: 5%;
+    }
+    header .sticky
+    {
+      padding-left: 5%;
+    }
+    header .navigation{
+        display: none;
+        position: fixed;
+    }
+    header .navigation.active{
+        width: 90%;
+        position: fixed;
+        top: 10%;
+        left: 5%;
+        align-items: center;
+        border-radius: 15px;
+        padding-bottom: 2vh;
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+    }
+    header .navigation li{
+        margin-top: 2vh;
+        margin-left: 0px;
+    }
+    header .navigation li a{
+      background: -webkit-linear-gradient(rgb(0, 0, 0), #5898d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+        font-size: 1.6em;
+    }
+
+    header .navigation li a:hover{
+      background: -webkit-linear-gradient(white, #5898d8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.6em;
+    }
+    .menutoggle{
+        display: flex;
+        position: fixed;
+        margin-left: 80%;
+        width: 40px;
+        height: 40px;
+        background: url(https://i.postimg.cc/qq7WKZ1m/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menutoggle.active
+    {
+        background: url(https://i.postimg.cc/yNcK65Gc/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .sticky .menutoggle{
+        filter: invert(1);
+        margin-left: 80%;
+    }
+    .sticky {
+        padding-left: 5%;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    header .navigation li button{
+      background: -webkit-linear-gradient(rgb(0, 0, 0), #5898d8);
+    }
+        
+}
+
+.signin-button {
+    width: 10vh;
+    height: 4vh;
+    cursor: pointer;
+    margin-top: -1vh; 
+    border-radius: 20px; 
+    font-size: bold;
+    color: white;
+    background: -webkit-linear-gradient(rgb(0, 0, 0), #5898d8);
+    transition: 0.5s;
+  }
+  
+  .signin-button:hover{
+    background: -webkit-linear-gradient(rgb(255, 255, 255), #5898d8);
+    -webkit-text-fill-color: black;
+}
+  
+  .sticky .signin-button{
+    background: -webkit-linear-gradient(rgb(0, 0, 0), #5898d8);
+  }
+  .sticky .signin-button:hover{
+    background: -webkit-linear-gradient(#5898d8, rgb(0, 0, 0));
+  }
+  
